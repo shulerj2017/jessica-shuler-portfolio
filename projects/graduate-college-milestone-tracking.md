@@ -17,7 +17,7 @@ To address these challenges, I designed and implemented a centralized, multi-app
 
 This approach standardized milestone processes across programs, improved visibility for both students and staff, and allowed business rules to be controlled through data rather than requiring application changes. The result is a scalable platform that supports complex academic workflows while remaining flexible and maintainable.
 
-![Canvas App - Home Page - Staff selections](../Images/Home_CollegeForms.jpg)
+Access driven buttons (Current Access: Program Coordinator): ![Canvas App - Home Page - Staff selections](../Images/Home_CollegeForms.jpg)
 ---
 
 ## Architecture Overview
