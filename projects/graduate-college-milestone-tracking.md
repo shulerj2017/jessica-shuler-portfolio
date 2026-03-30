@@ -17,6 +17,7 @@ To address these challenges, I designed and implemented a centralized, multi-app
 
 This approach standardized milestone processes across programs, improved visibility for both students and staff, and allowed business rules to be controlled through data rather than requiring application changes. The result is a scalable platform that supports complex academic workflows while remaining flexible and maintainable.
 
+![Canvas App - Home Page - Staff selections](../Images/Home_CollegeForms.jpg)
 ---
 
 ## Architecture Overview
@@ -68,8 +69,8 @@ The system supports distinct user experiences based on role, ensuring that each 
 
 ### Students
 - Submit Milestones 6, 7, and 9  
-- View milestone completion status  
-- Track pending approvals  
+- View milestone completion status  ![MilestonesCompleted](../Images/MilestonesCompelted_1_Edited.jpg)
+- Track pending approvals  ![Track Pending Approvals](../Images/MS6_PendingCommittee_Edited.jpg)
 
 ### College Staff
 - Submit Milestones 1–5 and 8  
@@ -88,7 +89,13 @@ The system supports both student-initiated and staff-initiated workflows, each w
 - Associate Dean  
 - Committee Chair  
 - Committee Members  
-- Dean’s Representative  
+- Dean’s Representative
+   
+Milestone 6 confirmation email stating the approval process:
+![MS6Email](../Images/MS6EmailConfirm_Edited.jpg)
+
+Milestone 6 Chair approval request example with due date:
+![MS6EmailChair](../Images/MS6EmailChair_Edited.jpg)
 
 ### Staff-Driven Approvals (Milestones 4, 5, 8)
 
@@ -107,12 +114,20 @@ A Model-Driven App provides a centralized interface for managing system data, bu
 
 ### Approved Faculty
 
+![Approved Faculty](../Images/AdminScreen_ApprovedFaculty_Edited.jpg)
+
 Faculty eligibility is controlled through defined levels:
 - Level 2: Eligible to serve as Chair or Member  
 - Level 1: Eligible to serve as Member only  
 - Level 0: Not eligible and excluded from selection  
 
-This ensures that committee assignments comply with academic policies.
+This ensures that committee assignments comply with academic policies and only allows students to select eligible faculty for committee role.
+
+Level 2 Faculty Selections
+![Approved Faculty](../Images/MS6_3_Edited.jpg)
+
+Level 1 Faculty Selections
+![Approved Faculty](../Images/MS6_2Edited.jpg)
 
 ---
 
@@ -141,20 +156,24 @@ A custom approval tracking layer extends native approval functionality by:
 
 - Providing centralized visibility into approval activity  
 - Allowing staff to monitor progress and history  
-- Displaying pending approvals within the Canvas App  
+- Displaying pending approvals within the Canvas App
 
+![Approved Faculty](../Images/Admin_Approvals_Edited.jpg)
 ---
 
 ### Faculty Serving
 
 Allows staff to select a faculty member and view all committees they are currently serving on, supporting visibility into faculty workload and participation.
 
+Custom Page
+![Faculty Serving_Custom Page](../Images/Admin_FacultyServing_CustomPage.jpg)
+
 ---
 
 ### Student Committees
 
 Two views are provided:
-- A display view used within the Canvas App  
+- A display view as Custom Page  
 - An administrative view for managing records in Dataverse  
 
 This separation ensures both usability and data control.
