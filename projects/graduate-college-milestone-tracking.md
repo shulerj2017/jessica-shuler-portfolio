@@ -1,33 +1,39 @@
 # Graduate College Milestone Tracking System  
-Enterprise Workflow and Governance Platform
+A centralized Power Platform solution for managing graduate student milestones, approvals, and academic governance across multiple colleges.
 
 ---
 
 ## Problem
 
-The Graduate College relied on a fragmented process to manage doctoral milestones, using email-based approvals, manual spreadsheets, and inconsistent workflows across programs. This approach resulted in approval delays, limited visibility into student progress, and no centralized reporting or accountability.
+The Graduate College relied on a fragmented process to manage doctoral milestones, using email-based approvals, manual spreadsheets, and inconsistent workflows across colleges. This resulted in approval delays, inconsistent processes between programs, and limited visibility into student progress.
 
-At the same time, the process required strict enforcement of academic policies, including multi-stage approvals, faculty eligibility rules, and role-based access for students, faculty, and administrators. The existing system lacked the structure and flexibility to support these requirements or adapt to changing business rules without significant manual effort and ongoing IT involvement.
+Because data was spread across multiple tools, staff did not have a reliable way to track where students were in the milestone process or identify those approaching completion. This made it difficult to anticipate graduation timelines or plan for advising, reviews, and administrative workload.
+
+At the same time, the process required strict enforcement of academic policies, including multi-stage approvals, faculty eligibility rules, and role-based access. The existing approach could not consistently enforce these requirements and required significant manual coordination to maintain accuracy.
 
 ---
 
 ## Solution
 
-To address these challenges, I designed and implemented a centralized, multi-application solution using Microsoft Power Platform. The system combines a Canvas App for end-user interaction, a Model-Driven App for administrative governance, and automated workflows to manage approvals and reporting.
+I designed and implemented a centralized solution using Microsoft Power Platform, combining a Canvas App for user interaction, a Model-Driven App for administrative management, and Power Automate workflows to orchestrate approvals and data processing.
 
-This approach standardized milestone processes across programs, improved visibility for both students and staff, and allowed business rules to be controlled through data rather than requiring application changes. The result is a scalable platform that supports complex academic workflows while remaining flexible and maintainable.
+The system standardizes milestone submissions and approval routing across programs while enforcing business rules through configurable data structures. Role-based experiences guide students, faculty, and staff through the process, and automated workflows manage approvals, reminders, and data updates.
+
+Milestone data is stored in Dataverse and synchronized to SharePoint to support reporting and downstream integration. This creates a consistent and reliable dataset that can be used to monitor student progression and support institutional reporting needs.
 
 ---
 
 ## Impact
 
-This solution transformed a fragmented, manual process into a centralized and scalable platform. By automating approvals, enforcing governance rules, and improving visibility, the system significantly reduced administrative overhead while improving the experience for both students and staff.
+The solution established a single, standardized platform for managing doctoral milestones, reducing manual coordination and improving consistency across programs. Automated approvals and dependency enforcement streamlined the process for both students and staff.
 
-It also enabled non-technical users to manage system behavior through data, reducing reliance on IT and ensuring the solution could evolve with changing academic requirements.
+Centralizing milestone data also enabled new analytical capabilities. Staff can now track student progression across milestones, identify patterns, and anticipate upcoming graduation activity, improving planning for advising and administrative workload.
+
+The platform was designed for long-term sustainability, with configurable business rules, structured DEV/TEST/PROD environments, and integration with downstream processes that update official student records in Oracle.
 
 ---
 
-## Challenges and Solutions
+## Key Challenges and How They Were Solved
 
 **Complex workflow requirements**  
 Designed dynamic approval routing logic to support multiple workflow paths.
