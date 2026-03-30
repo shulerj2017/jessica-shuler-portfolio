@@ -91,14 +91,11 @@ The system supports both student-initiated and staff-initiated workflows, each w
 - Committee Members  
 - Dean’s Representative
    
-Milestone 6 confirmation email stating the approval process:
-![MS6Email](../Images/MS6EmailConfirm_Edited.jpg)
+Milestone 6 confirmation email stating the approval process: ![MS6Email](../Images/MS6EmailConfirm_Edited.jpg)
 
-Milestone 6 Chair approval request example with due date:
-![MS6EmailChair](../Images/MS6EmailChair_Edited.jpg)
+Milestone 6 Chair approval request example with due date: ![MS6EmailChair](../Images/MS6EmailChair_Edited.jpg)
 
-Milestone 6 Approval Reminder example with due date and Button navigating the the Approval by environment and approval ID:
-![MS6EmailReminder](../Images/EmailReminder_Edited.jpg)
+Milestone 6 Approval Reminder example with due date and Button navigating the the Approval by environment and approval ID: ![MS6EmailReminder](../Images/EmailReminder_Edited.jpg)
 
 ### Staff-Driven Approvals (Milestones 4, 5, 8)
 
@@ -126,11 +123,9 @@ Faculty eligibility is controlled through defined levels:
 
 This ensures that committee assignments comply with academic policies and only allows students to select eligible faculty for committee role.
 
-Level 2 Faculty Selections
-![Approved Faculty](../Images/MS6_3_Edited.jpg)
+Level 2 Faculty Selections: ![Approved Faculty](../Images/MS6_3_Edited.jpg)
 
-Level 1 Faculty Selections
-![Approved Faculty](../Images/MS6_2Edited.jpg)
+Level 1 Faculty Selections: ![Approved Faculty](../Images/MS6_2Edited.jpg)
 
 ---
 
