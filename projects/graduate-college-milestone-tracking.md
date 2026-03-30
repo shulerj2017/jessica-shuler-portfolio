@@ -90,8 +90,6 @@ The system supports both student-initiated and staff-initiated workflows, each w
 - Committee Chair  
 - Committee Members  
 - Dean’s Representative
-   
-Milestone 6 confirmation email stating the approval process: ![MS6Email](../Images/MS6EmailConfirm_Edited.jpg)
 
 Milestone 6 Chair approval request example with due date: ![MS6EmailChair](../Images/MS6EmailChair_Edited.jpg)
 
@@ -125,11 +123,7 @@ This ensures that committee assignments comply with academic policies and only a
 
 PowerFx Collection in Canvas App to get approved faculty for selections: ![Approved Collection](../Images/Collection_ApprovedFaculty.jpg)
 
-Using the Collection to filter combo box selection: ![Approved Collection_Dropdown](../Images/Collection_ApprovedFaculty_Dropdowns.jpg)
-
-Level 2 Faculty Selections in Canvas App based on Dataverse Table: ![Approved Faculty](../Images/MS6_3_Edited.jpg)
-
-Level 1 Faculty Selections in Canvas App based on Dataverse Table: ![Approved Faculty](../Images/MS6_2Edited.jpg)
+Level 2 Faculty Selections in Canvas App based on Collectino (FIlter: DorcoralLevel = 2): ![Approved Faculty](../Images/MS6_3_Edited.jpg)
 
 ---
 
