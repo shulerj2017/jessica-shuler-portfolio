@@ -18,11 +18,38 @@ To address these challenges, I designed and implemented a centralized, multi-app
 This approach standardized milestone processes across programs, improved visibility for both students and staff, and allowed business rules to be controlled through data rather than requiring application changes. The result is a scalable platform that supports complex academic workflows while remaining flexible and maintainable.
 
 Access driven buttons (Current Access: Program Coordinator): ![Canvas App - Home Page - Staff selections](../Images/Home_CollegeForms.jpg)
+
+---
+
+## Impact
+
+This solution transformed a fragmented, manual process into a centralized and scalable platform. By automating approvals, enforcing governance rules, and improving visibility, the system significantly reduced administrative overhead while improving the experience for both students and staff.
+
+It also enabled non-technical users to manage system behavior through data, reducing reliance on IT and ensuring the solution could evolve with changing academic requirements.
+
+---
+
+## Challenges and Solutions
+
+**Complex workflow requirements**  
+Designed dynamic approval routing logic to support multiple workflow paths.
+
+**Licensing constraints**  
+Implemented parent/child flow patterns to securely access Dataverse without requiring premium licenses for all users.
+
+**Data performance and accessibility**  
+Introduced a hybrid Dataverse and SharePoint model to balance performance and usability.
+
+**Changing business rules**  
+Built a configuration-driven system allowing updates without application changes.
+
 ---
 
 ## Architecture Overview
 
 The solution is structured using a layered architecture that separates user experience, data management, and automation. This design improves scalability, simplifies maintenance, and allows each component to evolve independently while supporting the overall workflow.
+
+---
 
 ### User Experience Layer
 
@@ -235,26 +262,6 @@ This approach enabled:
 
 ![ListFormula](../Images/Formulas.jpg)
 
----
 
-## Challenges and Solutions
 
-**Complex workflow requirements**  
-Designed dynamic approval routing logic to support multiple workflow paths.
 
-**Licensing constraints**  
-Implemented parent/child flow patterns to securely access Dataverse without requiring premium licenses for all users.
-
-**Data performance and accessibility**  
-Introduced a hybrid Dataverse and SharePoint model to balance performance and usability.
-
-**Changing business rules**  
-Built a configuration-driven system allowing updates without application changes.
-
----
-
-## Impact
-
-This solution transformed a fragmented, manual process into a centralized and scalable platform. By automating approvals, enforcing governance rules, and improving visibility, the system significantly reduced administrative overhead while improving the experience for both students and staff.
-
-It also enabled non-technical users to manage system behavior through data, reducing reliance on IT and ensuring the solution could evolve with changing academic requirements.
