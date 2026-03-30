@@ -123,9 +123,13 @@ Faculty eligibility is controlled through defined levels:
 
 This ensures that committee assignments comply with academic policies and only allows students to select eligible faculty for committee role.
 
-Level 2 Faculty Selections: ![Approved Faculty](../Images/MS6_3_Edited.jpg)
+PowerFx Collection in Canvas App to get approved faculty for selections: ![Approved Collection](../Images/Collection_ApprovedFaculty.jpg)
 
-Level 1 Faculty Selections: ![Approved Faculty](../Images/MS6_2Edited.jpg)
+Using the Collection to filter combo box selection: ![Approved Collection_Dropdown](../Images/Collection_ApprovedFaculty_Dropdowns.jpg)
+
+Level 2 Faculty Selections in Canvas App based on Dataverse Table: ![Approved Faculty](../Images/MS6_3_Edited.jpg)
+
+Level 1 Faculty Selections in Canvas App based on Dataverse Table: ![Approved Faculty](../Images/MS6_2Edited.jpg)
 
 ---
 
@@ -135,8 +139,8 @@ Stores Program Directors, Associate Deans, and Program Coordinators.
 
 Used for:
 - Approval routing  
-- Dropdown selections  
-- Role-based access control  
+- Dropdown selection choices in Canvas App
+- Role-based access control in Canvas App
 
 ---
 
@@ -220,6 +224,22 @@ SharePoint is used as a reporting layer to reduce direct load on Dataverse and i
 - Role-based user experience and data access  
 - Controlled exposure of data  
 - Service account-driven workflows for reliability and continuity  
+
+---
+
+### Environment Strategy (DEV / TEST / PROD)
+
+The solution was designed using a structured application lifecycle management (ALM) approach with separate Development, Test, and Production environments. This ensured that new features, configuration changes, and workflow updates could be developed and validated without impacting live users.
+
+Environment-specific configuration was handled dynamically using environment variables and conditional logic within the application. For example, data sources such as SharePoint lists and Dataverse tables were selected at runtime based on the current environment, allowing the same application and workflows to operate across DEV, TEST, and PROD without requiring manual changes.
+
+This approach enabled:
+- Controlled testing and validation before production releases  
+- Reduced risk of introducing errors into live workflows  
+- Consistent deployment across environments using solution-based ALM practices  
+- Improved maintainability by centralizing environment configuration logic  
+
+![ListFormula](../Images/Formulas.jpg)
 
 ---
 
