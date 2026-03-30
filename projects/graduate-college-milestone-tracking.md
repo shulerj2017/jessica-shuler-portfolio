@@ -17,8 +17,6 @@ To address these challenges, I designed and implemented a centralized, multi-app
 
 This approach standardized milestone processes across programs, improved visibility for both students and staff, and allowed business rules to be controlled through data rather than requiring application changes. The result is a scalable platform that supports complex academic workflows while remaining flexible and maintainable.
 
-Access driven buttons (Current Access: Program Coordinator): ![Canvas App - Home Page - Staff selections](../Images/Home_CollegeForms.jpg)
-
 ---
 
 ## Impact
@@ -86,23 +84,34 @@ The solution is structured using a layered architecture that separates user expe
 - Multi-stage approval workflows  
 - Reminder and timeout logic  
 - CSV report generation and distribution  
-- Nightly data synchronization (Dataverse to SharePoint)  
+- Nightly data synchronization (Milestones Complete List & Student Committee List: Dataverse to SharePoint)
+- Weekly data synchronization (Eligible Students: Office 365 Security Group to Dataverse)  
 
 ---
 
 ## Role-Based Design
 
-The system supports distinct user experiences based on role, ensuring that each group interacts with the system in a way that aligns with their responsibilities.
+The system supports distinct user experiences based on role, ensuring that each group interacts with the system in a way that aligns with their responsibilities. Roles are assigned to current user based on two DataVerse Tables: Eligible Students and Program List.
 
 ### Students
 - Submit Milestones 6, 7, and 9  
-- View milestone completion status  ![MilestonesCompleted](../Images/MilestonesCompelted_1_Edited.jpg)
-- Track pending approvals  ![Track Pending Approvals](../Images/MS6_PendingCommittee_Edited.jpg)
+- View milestone completion status  
+- Track pending approvals and block submission of student forms when Pending Approvals exist 
+
+### Access driven buttons (Current User Access: Student): 
+**Home:** ![Canvas App - Home Page - Staff selections](../Images/Home_StudentForms.jpg)
+**Student's Milestones Completed:** ![MilestonesCompleted](../Images/MilestonesCompelted_1_Edited.jpg)
+**Popup preventing submittion of student forms if pending approvals exist:** ![Track Pending Approvals](../Images/MS6_PendingCommittee_Edited.jpg)
 
 ### College Staff
 - Submit Milestones 1–5 and 8  
 - View student progress and committee assignments  
 - Access reporting and administrative views  
+
+### Access driven buttons (Current User Access: Program Coordinator): 
+**Home:** ![Canvas App - Home Page - Staff selections](../Images/Home_CollegeForms.jpg)
+**College's Committee List:** ![Canvas App - College List-committees](../Images/CollegeListsCommittees_edited.jpg)
+**College's Milestone's Met List:** ![Canvas App - College List-Milestones](../Images/CollegeListsMilestones_Edited.jpg)
 
 ---
 
@@ -118,7 +127,7 @@ The system supports both student-initiated and staff-initiated workflows, each w
 - Committee Members  
 - Dean’s Representative
 
-Milestone 6 Chair approval request example with due date: ![MS6EmailChair](../Images/MS6EmailChair_Edited.jpg)
+Milestone 6 Chair approval request example with due date and markup to make the ask clear: ![MS6EmailChair](../Images/MS6EmailChair_Edited.jpg)
 
 Milestone 6 Approval Reminder example with due date and Button navigating the the Approval by environment and approval ID: ![MS6EmailReminder](../Images/EmailReminder_Edited.jpg)
 
