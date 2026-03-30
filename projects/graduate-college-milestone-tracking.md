@@ -97,6 +97,9 @@ Milestone 6 confirmation email stating the approval process:
 Milestone 6 Chair approval request example with due date:
 ![MS6EmailChair](../Images/MS6EmailChair_Edited.jpg)
 
+Milestone 6 Approval Reminder example with due date and Button navigating the the Approval by environment and approval ID:
+![MS6EmailReminder](../Images/EmailReminder_Edited.jpg)
+
 ### Staff-Driven Approvals (Milestones 4, 5, 8)
 
 - Submitted by staff  
