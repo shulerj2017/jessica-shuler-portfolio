@@ -131,17 +131,41 @@ This combination of automation, validation controls, and performance visibility 
 
 ---
 
-### Power App Monitoring
+### Monitoring Dashboard
 
-Home Screen ![Canvas App - Home Page](../../Images/PEDSHome.jpg)
+The Power App provides a centralized interface for tracking file processing, reviewing errors, and supporting manual intervention when needed.
 
-Current Queue - Files are added as they arrive. Statuses available: New, In Progress, Retry, Worfklow Failed, Workflow Complete ![Canvas App - Home Page](../../Images/PEDSQueue.jpg)
+---
 
-All PEDS Input - Logs all rows attempeted to process in website with "Processed" either Yes or No. Includes excel link and row number for reference. ![Canvas App - Home Page](../../Images/PEDSAllItemsLog.jpg)
+<p align="center">
+  <img src="../../Images/PEDSHome.jpg" width="80%">
+  <br>
+  <em>Home Screen – Entry point for navigating queue, processed items, and error tracking.</em>
+</p>
 
-PEDS Errors List - Allows staff to see all rows that were not successfully processed and allows them to view details to manually enter row, or cancel if error persists. Also included a toggle to inform IT of the error if they believe the error was due to a workflow issue. ![Canvas App - Home Page](../../Images/PEDSErrors.jpg)
+<p align="center">
+  <img src="../../Images/PEDSQueue.jpg" width="80%">
+  <br>
+  <em>Current Queue – Files are added as they arrive with statuses including New, In Progress, Retry, Workflow Failed, and Complete.</em>
+</p>
 
-Details Screen for Manually Entry - Staff can make a selection for "Processed". This will log current users name and email for reference of who changed the Processed Status ![Canvas App - Home Page](../../Images/PEDSDetails.jpg)
+<p align="center">
+  <img src="../../Images/PEDSAllItemsLog.jpg" width="80%">
+  <br>
+  <em>All PEDS Input – Logs all processed rows with status (Yes/No), including Excel reference and row details.</em>
+</p>
+
+<p align="center">
+  <img src="../../Images/PEDSErrors.jpg" width="80%">
+  <br>
+  <em>Error List – Displays failed rows with options to review, manually process, or escalate issues to IT.</em>
+</p>
+
+<p align="center">
+  <img src="../../Images/PEDSDetails.jpg" width="80%">
+  <br>
+  <em>Details Screen – Supports manual status updates while capturing user identity for audit tracking.</em>
+</p>
 
  
 
