@@ -4,6 +4,7 @@ Portfolio of enterprise Power Platform solutions focused on workflow automation,
 
 ## Featured Projects
 - [Graduate College Milestone Tracking System](projects/graduate-college-milestone-tracking.md)
+- [Financial Data Processing Automation (RPA)](projects/Financial Data Processing Automation (RPA).md)
 
 ## Skills
 - Power Apps (Canvas + Model-Driven)
