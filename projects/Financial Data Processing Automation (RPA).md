@@ -50,7 +50,7 @@ Additionally, the solution established a scalable framework for RPA orchestratio
 
 ---
 
-## Challenges and Solutions
+## Key Challenges and How They Were Solved
 
 **High volume of repetitive validation**  
 → Implemented deduplication logic to reduce redundant checks  
