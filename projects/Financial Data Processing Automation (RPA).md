@@ -92,7 +92,7 @@ In addition, automated notifications at key stages—file acceptance, validation
 ## Key Design Decisions
 
 ### Unattended RPA Execution
-Runs on VM using unattended PAD for reliable processing.
+- Runs on VM using unattended PAD for reliable processing.
 
 ### Queue-Based Processing Model
 - Single file execution  
@@ -100,19 +100,19 @@ Runs on VM using unattended PAD for reliable processing.
 - Safe retries  
 
 ### Separation of Intake and Execution
-Prevents duplicate processing and enables scheduling control.
+- Prevents duplicate processing and enables scheduling control.
 
 ### Post-Queue Validation
-Detailed validation ensures only valid data is processed.
+- Detailed validation ensures only valid data is processed.
 
 ### Deduplication Optimization
-Reduces repeated validation checks for performance.
+- Reduces repeated validation checks for performance.
 
 ### Error Handling and Retry
-Failures logged and reprocessable without duplication.
+- Failures logged and reprocessable without duplication.
 
 ### Human-in-the-Loop
-PowerApp enables monitoring, prioritization, and manual intervention.
+- PowerApp enables monitoring, prioritization, and manual intervention.
 
 ---
 
