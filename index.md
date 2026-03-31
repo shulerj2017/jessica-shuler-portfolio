@@ -27,7 +27,7 @@ Enterprise workflow and approval platform
 - Automated document generation and tracking  
 - Data integration for downstream student record updates  
 
-[View Project →](./projects/peds-rpa/)
+[View Project →](./projects/graduate-college/)
 
 ---
 
@@ -40,7 +40,7 @@ Queue-based unattended automation system
 - Automated web-based data entry  
 - Full lifecycle notifications and monitoring  
 
-[View Project →](./projects/graduate-college/)
+[View Project →](./projects/peds-rpa/)
 
 ---
 
