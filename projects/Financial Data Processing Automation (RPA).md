@@ -69,6 +69,36 @@ Additionally, the solution established a scalable framework for RPA orchestratio
 
 ---
 
+## Validation and Intake Controls
+
+A key part of the PEDS automation is the validation workflow, which acts as a gatekeeper before files enter the processing queue. Rather than allowing every submission to move directly into automated entry, the solution performs structured validation checks to confirm that files are complete, formatted correctly, and eligible for processing.
+
+If validation errors are found, the file is not added to the queue. Instead, the automation marks the issues directly in the Excel file and returns it to the submitter by email so corrections can be made before resubmission. This prevents invalid data from entering the downstream automation process and reduces the need for staff to troubleshoot avoidable errors later.
+
+### Validation Checks
+
+The validation workflow checks for:
+
+- Correct file and table structure
+- Required fields and expected column layout
+- Valid account and check date combinations
+- Missing cost center or transfer amount/percentage
+- Invalid or incomplete correction rows
+- Transfer percentages greater than 100%
+- Transfer amounts below the minimum valid threshold
+- Amounts that exceed the available balance
+- “Total” rows that incorrectly contain a correction request
+- Check dates older than 90 days
+
+### Validation Outcome
+
+- **If the file passes validation:** it is added to the queue and becomes eligible for unattended processing.
+- **If the file fails validation:** it is not queued, the issues are marked directly in the workbook, and the annotated file is emailed back to the submitter for correction and resubmission.
+
+This approach improves data quality at the intake stage, protects the unattended automation from avoidable failures, and creates a cleaner separation between valid work ready for processing and files that require user correction.
+
+---
+
 ## Key Design Decisions
 
 ### Environment Strategy (DEV / TEST / PROD)
@@ -156,5 +186,21 @@ The system follows a layered RPA architecture:
 
 - **Monitoring & Control Layer**
   - PowerApp interface  
-  - SharePoint Queue, Logs, and Error Lists  
+  - SharePoint Queue, Logs, and Error Lists 
+
+---
+
+### Power App Monitoring
+
+Home Screen ![Canvas App - Home Page](../Images/PEDSHome.jpg)
+
+Current Queue - Files are added as they arrive. Statuses available: New, In Progress, Retry, Worfklow Failed, Workflow Complete ![Canvas App - Home Page](../Images/PEDSQueue.jpg)
+
+All PEDS Input - Logs all rows attempeted to process in website with "Processed" either Yes or No. Includes excel link and row number for reference. ![Canvas App - Home Page](../Images/PEDSAllItemsLog.jpg)
+
+PEDS Errors List - Allows staff to see all rows that were not successfully processed and allows them to view details to manually enter row, or cancel if error persists. Also included a toggle to inform IT of the error if they believe the error was due to a workflow issue. ![Canvas App - Home Page](../Images/PEDSErrors.jpg)
+
+Details Screen for Manually Entry - Staff can make a selection for "Processed". This will log current users name and email for reference of who changed the Processed Status ![Canvas App - Home Page](../Images/PEDSDetails.jpg)
+
+ 
 
