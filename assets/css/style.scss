@@ -1,4 +1,8 @@
-img {
-  max-width: 100% !important;
-  width: 100%;
+---
+---
+
+@import "{{ site.theme }}";
+.page-header {
+  background: linear-gradient(120deg, #4c1d95, #7c3aed);
+  color: white;
 }
