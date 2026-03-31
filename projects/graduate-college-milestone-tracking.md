@@ -93,6 +93,8 @@ The solution is structured using a layered architecture that separates user expe
 - Nightly data synchronization (Milestones Complete List & Student Committee List: Dataverse to SharePoint)
 - Weekly data synchronization (Eligible Students: Office 365 Security Group to Dataverse)  
 
+High Level Architectural Diagram ![Overview](../Images/MilestonesOverview.jpg)
+
 ---
 
 ## Role-Based Design
