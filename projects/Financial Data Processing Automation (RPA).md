@@ -7,21 +7,21 @@ Queue-Based Robotic Process Automation for Financial Data Validation and Entry
 
 The PEDS process supports internal financial adjustments between accounting structures and required staff to manually validate and enter correction data into a web-based system. Each submission could contain hundreds of rows, often with repeated account and date combinations that required identical validation checks.
 
-The process was highly manual and time-consuming, requiring staff to repeatedly navigate a web interface to validate data and submit corrections. As submission volume increased, this created bottlenecks, delays, and increased risk of inconsistencies or errors.
+This created a highly manual and time-intensive workflow, where staff were required to repeatedly navigate the system to validate data and submit corrections. As submission volume increased, the process became a bottleneck, introducing delays, increasing the likelihood of inconsistencies, and limiting the team’s ability to scale.
 
-In addition to the operational burden, there was no centralized mechanism to track submissions from intake through completion. Staff had limited visibility into which files were in progress, failed validation, or were partially processed, making it difficult to prioritize work, troubleshoot issues, or ensure timely completion.
+At the same time, the process lacked a centralized mechanism to track submissions from intake through completion. Staff had limited visibility into processing status, failures, or partial completion, making it difficult to prioritize work, identify issues, or ensure timely processing.
 
 ---
 
 ## Solution
 
-To address these challenges, I designed and implemented a queue-based RPA architecture using Power Automate, Power Automate Desktop (PAD), SharePoint, and a PowerApp interface. The solution separates intake, orchestration, validation, execution, and monitoring into distinct layers, enabling scalable and controlled automation.
+To address these challenges, I designed and implemented a queue-based RPA architecture using Power Automate, Power Automate Desktop (PAD), SharePoint, and a PowerApp interface. The solution separates intake, orchestration, validation, execution, and monitoring into distinct layers, creating a scalable and controlled automation framework.
 
-The process begins with file submission via email or manual upload. A lightweight intake check confirms that the file is a valid Excel document and contains the expected PEDS identifier before allowing it to enter the processing queue. Once accepted, files are added to a centralized SharePoint-based queue where they are managed and prioritized.
+The process begins with file submission via email or manual upload, followed by a lightweight intake check to confirm that the file is a valid Excel document containing the expected PEDS identifier. Files that pass this screening are added to a centralized SharePoint-based queue, where they are managed, tracked, and prioritized.
 
-A scheduled orchestration flow retrieves queue items and triggers an unattended Power Automate Desktop bot running on a virtual machine. At this stage, detailed validation is performed, including file structure checks, business rule validation, and enforcement of date constraints. Files that fail validation are marked directly within the Excel file and returned to the submitter for correction.
+A scheduled orchestration flow retrieves queue items and triggers an unattended Power Automate Desktop bot running on a virtual machine. Detailed validation is performed at this stage, including file structure checks, business rule enforcement, and date validation. Files that fail validation are marked directly within the Excel file and returned to the submitter for correction, preventing invalid data from entering downstream processing.
 
-If validation succeeds, the automation proceeds to submit each row into the PEDS web system. Processing results are logged and tracked, and the system provides notifications throughout the lifecycle to keep users informed of submission status.
+Validated files proceed to automated data entry, where each row is submitted into the PEDS system in a controlled execution model. Processing results are logged, and notifications are generated throughout the lifecycle to provide visibility into file acceptance, validation outcomes, and final processing results.
 
 ---
 
