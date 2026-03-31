@@ -198,7 +198,7 @@ A custom approval tracking layer extends native approval functionality by:
 - Allowing staff to monitor progress and history  
 - Displaying pending approvals within the Canvas App
 
-![Approved Faculty](../Images/Admin_Approvals_Edited.jpg)
+![Approved Faculty](../../Images/Admin_Approvals_Edited.jpg)
 ---
 
 ### Faculty Serving
