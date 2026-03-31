@@ -87,7 +87,7 @@ This combination of automation, validation controls, and performance visibility 
 
 ### High Level Diagram 
 
-![PEDS_Diagram](../Images/PEDS_Diagram.jpg)
+![PEDS_Diagram](../../Images/PEDS_Diagram.jpg)
 
 ---
 
@@ -131,15 +131,15 @@ This combination of automation, validation controls, and performance visibility 
 
 ### Power App Monitoring
 
-Home Screen ![Canvas App - Home Page](../Images/PEDSHome.jpg)
+Home Screen ![Canvas App - Home Page](../../Images/PEDSHome.jpg)
 
-Current Queue - Files are added as they arrive. Statuses available: New, In Progress, Retry, Worfklow Failed, Workflow Complete ![Canvas App - Home Page](../Images/PEDSQueue.jpg)
+Current Queue - Files are added as they arrive. Statuses available: New, In Progress, Retry, Worfklow Failed, Workflow Complete ![Canvas App - Home Page](../../Images/PEDSQueue.jpg)
 
-All PEDS Input - Logs all rows attempeted to process in website with "Processed" either Yes or No. Includes excel link and row number for reference. ![Canvas App - Home Page](../Images/PEDSAllItemsLog.jpg)
+All PEDS Input - Logs all rows attempeted to process in website with "Processed" either Yes or No. Includes excel link and row number for reference. ![Canvas App - Home Page](../../Images/PEDSAllItemsLog.jpg)
 
-PEDS Errors List - Allows staff to see all rows that were not successfully processed and allows them to view details to manually enter row, or cancel if error persists. Also included a toggle to inform IT of the error if they believe the error was due to a workflow issue. ![Canvas App - Home Page](../Images/PEDSErrors.jpg)
+PEDS Errors List - Allows staff to see all rows that were not successfully processed and allows them to view details to manually enter row, or cancel if error persists. Also included a toggle to inform IT of the error if they believe the error was due to a workflow issue. ![Canvas App - Home Page](../../Images/PEDSErrors.jpg)
 
-Details Screen for Manually Entry - Staff can make a selection for "Processed". This will log current users name and email for reference of who changed the Processed Status ![Canvas App - Home Page](../Images/PEDSDetails.jpg)
+Details Screen for Manually Entry - Staff can make a selection for "Processed". This will log current users name and email for reference of who changed the Processed Status ![Canvas App - Home Page](../../Images/PEDSDetails.jpg)
 
  
 
