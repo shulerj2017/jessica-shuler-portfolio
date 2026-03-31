@@ -90,54 +90,112 @@ The solution is structured using a layered architecture that separates user expe
 - Multi-stage approval workflows  
 - Reminder and timeout logic  
 - CSV report generation and distribution  
-- Nightly data synchronization (Milestones Complete List & Student Committee List: Dataverse to SharePoint)
-- Weekly data synchronization (Eligible Students: Office 365 Security Group to Dataverse)  
+- Nightly data synchronization (Milestones Complete & Student Committee Lists: Dataverse → SharePoint)  
+- Weekly data synchronization (Eligible Students: Office 365 Security Group → Dataverse)  
 
-High Level Architectural Diagram ![Overview](../../Images/MilestonesOverview.jpg)
+### Architecture Overview
+
+The solution is structured using a layered architecture that separates user interaction, orchestration, automation, and data storage to support scalability and maintainability.
+
+<p align="center">
+  <img src="../../Images/MilestonesOverview.jpg" width="100%">
+  <br>
+  <em>High-level architecture showing separation of Canvas App, Model-Driven App, automation workflows, and data layers with DEV/TEST/PROD ALM strategy.</em>
+</p>
 
 ---
 
 ## Role-Based Design
 
-The system supports distinct user experiences based on role, ensuring that each group interacts with the system in a way that aligns with their responsibilities. Roles are assigned to current user based on two DataVerse Tables: Eligible Students and Program List.
+The system supports distinct user experiences based on role, ensuring each group interacts with the system in alignment with their responsibilities. Roles are determined using Dataverse tables (Eligible Students and Program List).
+
+---
 
 ### Students
+
 - Submit Milestones 6, 7, and 9  
 - View milestone completion status  
-- Track pending approvals and block submission of student forms when Pending Approvals exist 
+- Track pending approvals and prevent submission when approvals are outstanding  
 
-### Access driven buttons (Current User Access: Student): 
-**Home:** ![Canvas App - Home Page - Staff selections](../../Images/Home_StudentForms.jpg)
-**Student's Milestones Completed:** ![MilestonesCompleted](../../Images/MilestonesCompelted_1_Edited.jpg)
-**Popup preventing submittion of student forms if pending approvals exist:** ![Track Pending Approvals](../Images/MS6_PendingCommittee_Edited.jpg)
+#### Student Experience
+
+<p align="center">
+  <img src="../../Images/Home_StudentForms.jpg" width="80%">
+  <br>
+  <em>Home Screen – Student view with access to milestone submission forms.</em>
+</p>
+
+<p align="center">
+  <img src="../../Images/MilestonesCompelted_1_Edited.jpg" width="80%">
+  <br>
+  <em>Milestones Completed – Displays completed milestones and progress tracking.</em>
+</p>
+
+<p align="center">
+  <img src="../../Images/MS6_PendingCommittee_Edited.jpg" width="80%">
+  <br>
+  <em>Validation Popup – Prevents submission when required approvals are still pending.</em>
+</p>
+
+---
 
 ### College Staff
+
 - Submit Milestones 1–5 and 8  
 - View student progress and committee assignments  
 - Access reporting and administrative views  
 
-### Access driven buttons (Current User Access: Program Coordinator): 
-**Home:** ![Canvas App - Home Page - Staff selections](../../Images/Home_CollegeForms.jpg)
-**College's Committee List:** ![Canvas App - College List-committees](../../Images/CollegeListsCommittees_edited.jpg)
-**College's Milestone's Met List:** ![Canvas App - College List-Milestones](../../Images/CollegeListsMilestones_Edited.jpg)
+#### Staff Experience
 
----
+<p align="center">
+  <img src="../../Images/Home_CollegeForms.jpg" width="80%">
+  <br>
+  <em>Home Screen – Staff view with access to administrative forms and reporting tools.</em>
+</p>
 
-## Approval Workflow Design
+<p align="center">
+  <img src="../../Images/CollegeListsCommittees_edited.jpg" width="80%">
+  <br>
+  <em>Committee List – Displays committee assignments for students in users college.</em>
+</p>
 
-The system supports both student-initiated and staff-initiated workflows, each with distinct approval paths while maintaining consistent governance rules.
+<p align="center">
+  <img src="../../Images/CollegeListsMilestones_Edited.jpg" width="80%">
+  <br>
+  <em>Milestones Met – Provides visibility into student milestone completion for students in users college.</em>
+</p>
 
 ### Student-Driven Approvals (Milestones 6, 7, 9)
 
-- Program Director  
-- Associate Dean  
-- Committee Chair  
-- Committee Members  
-- Dean’s Representative
+The approval workflow is designed using a staged model, where approvals are grouped and processed in sequence while allowing parallel approvals within each stage.
 
-Milestone 6 Chair approval request example with due date and markup to make the ask clear: ![MS6EmailChair](../../Images/MS6EmailChair_Edited.jpg)
+**Approval Stages:**
 
-Milestone 6 Approval Reminder example with due date and Button navigating the the Approval by environment and approval ID: ![MS6EmailReminder](../../Images/EmailReminder_Edited.jpg)
+1. **Program Director & Associate Dean (parallel approval stage)**  
+2. **Committee Chair**  
+3. **Committee Members & Dean’s Representative (parallel approval stage)**  
+
+This structure ensures appropriate oversight while reducing delays by allowing multiple approvers to respond simultaneously within each stage.
+
+---
+
+#### Approval Request Example (Committee Chair)
+
+<p align="center">
+  <img src="../../Images/MS6EmailChair_Edited.jpg" width="80%">
+  <br>
+  <em>Approval request email clearly outlining committee structure, program details, and required response deadline.</em>
+</p>
+
+---
+
+#### Approval Reminder Example
+
+<p align="center">
+  <img src="../../Images/EmailReminder_Edited.jpg" width="80%">
+  <br>
+  <em>Automated reminder email including deadline and direct navigation link to the approval record within the correct environment.</em>
+</p>
 
 ### Staff-Driven Approvals (Milestones 4, 5, 8)
 
@@ -156,18 +214,45 @@ A Model-Driven App provides a centralized interface for managing system data, bu
 
 ### Approved Faculty
 
-![Approved Faculty](../../Images/AdminScreen_ApprovedFaculty_Edited.jpg)
+The Model-Driven App manages faculty eligibility and enforces governance rules for committee selection.
+
+<p align="center">
+  <img src="../../Images/AdminScreen_ApprovedFaculty_Edited.jpg" width="80%">
+  <br>
+  <em>Approved Faculty Management – Administrative interface for maintaining faculty eligibility levels.</em>
+</p>
 
 Faculty eligibility is controlled through defined levels:
-- Level 2: Eligible to serve as Chair or Member  
-- Level 1: Eligible to serve as Member only  
-- Level 0: Not eligible and excluded from selection  
 
-This ensures that committee assignments comply with academic policies and only allows students to select eligible faculty for committee role.
+- **Level 2:** Eligible to serve as Chair or Member  
+- **Level 1:** Eligible to serve as Member only  
+- **Level 0:** Not eligible and excluded from selection  
 
-PowerFx Collection in Canvas App to get approved faculty for selections: ![Approved Collection](../../Images/Collection_ApprovedFaculty.jpg)
+This ensures that committee assignments comply with academic policies and prevents students from selecting ineligible faculty.
 
-Level 2 Faculty Selections in Canvas App based on Collectino (FIlter: DorcoralLevel = 2): ![Approved Faculty](../../Images/MS6_3_Edited.jpg)
+---
+
+#### Data Retrieval Logic (Canvas App)
+
+The Canvas App dynamically retrieves eligible faculty using a Power Fx collection populated from Dataverse via a parent/child flow pattern. This approach enables secure data access and centralizes data retrieval logic without requiring direct connections from the app.
+
+<p align="center">
+  <img src="../../Images/Collection_ApprovedFaculty.jpg" width="80%">
+  <br>
+  <em>Power Fx Collection – Retrieves and structures approved faculty data for use in selection controls.</em>
+</p>
+
+---
+
+#### Filtered Faculty Selection (Level-Based)
+
+Faculty selection controls are filtered based on eligibility level to enforce role-specific requirements.
+
+<p align="center">
+  <img src="../../Images/MS6_3_Edited.jpg" width="80%">
+  <br>
+  <em>Filtered Selection – Only Level 2 faculty are available for Chair selection based on eligibility rules.</em>
+</p>
 
 ---
 
@@ -192,21 +277,31 @@ This allows staff to enable or pause submissions without modifying the applicati
 
 ### Approval Tracking
 
-A custom approval tracking layer extends native approval functionality by:
+A custom approval tracking layer extends native approval functionality by providing centralized visibility into approval activity and progress.
 
-- Providing centralized visibility into approval activity  
-- Allowing staff to monitor progress and history  
-- Displaying pending approvals within the Canvas App
+This layer enables:
 
-![Approved Faculty](../../Images/Admin_Approvals_Edited.jpg)
+- Centralized tracking of approval status and history  
+- Real-time visibility into pending approvals  
+- Integration of approval status directly within the Canvas App  
+
+<p align="center">
+  <img src="../../Images/Admin_Approvals_Edited.jpg" width="100%">
+  <br>
+  <em>Approval Tracking – Custom interface displaying approval status, history, and pending actions within the application.</em>
+</p>
+
 ---
 
 ### Faculty Serving
 
-Allows staff to select a faculty member and view all committees they are currently serving on, supporting visibility into faculty workload and participation.
+Provides visibility into faculty workload by allowing staff to select a faculty member and view all committees they are currently serving on.
 
-Custom Page
-![Faculty Serving_Custom Page](../../Images/Admin_FacultyServing_CustomPage.jpg)
+<p align="center">
+  <img src="../../Images/Admin_FacultyServing_CustomPage.jpg" width="80%">
+  <br>
+  <em>Faculty Serving – Custom page displaying all committee assignments for a selected faculty member to support workload visibility and planning.</em>
+</p>
 
 ---
 
@@ -271,13 +366,20 @@ The solution was designed using a structured application lifecycle management (A
 
 Environment-specific configuration was handled dynamically using environment variables and conditional logic within the application. For example, data sources such as SharePoint lists and Dataverse tables were selected at runtime based on the current environment, allowing the same application and workflows to operate across DEV, TEST, and PROD without requiring manual changes.
 
+### ALM and Environment Configuration
+
 This approach enabled:
+
 - Controlled testing and validation before production releases  
 - Reduced risk of introducing errors into live workflows  
 - Consistent deployment across environments using solution-based ALM practices  
 - Improved maintainability by centralizing environment configuration logic  
 
-![ListFormula](../../Images/Formulas.jpg)
+<p align="center">
+  <img src="../../Images/Formulas.jpg" width="80%">
+  <br>
+  <em>Environment Configuration Logic – Uses environment-based switching to dynamically reference DEV, TEST, and PROD data sources.</em>
+</p>
 
 
 
