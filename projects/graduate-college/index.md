@@ -93,7 +93,7 @@ The solution is structured using a layered architecture that separates user expe
 - Nightly data synchronization (Milestones Complete List & Student Committee List: Dataverse to SharePoint)
 - Weekly data synchronization (Eligible Students: Office 365 Security Group to Dataverse)  
 
-High Level Architectural Diagram ![Overview](../Images/MilestonesOverview.jpg)
+High Level Architectural Diagram ![Overview](../../Images/MilestonesOverview.jpg)
 
 ---
 
@@ -107,8 +107,8 @@ The system supports distinct user experiences based on role, ensuring that each 
 - Track pending approvals and block submission of student forms when Pending Approvals exist 
 
 ### Access driven buttons (Current User Access: Student): 
-**Home:** ![Canvas App - Home Page - Staff selections](../Images/Home_StudentForms.jpg)
-**Student's Milestones Completed:** ![MilestonesCompleted](../Images/MilestonesCompelted_1_Edited.jpg)
+**Home:** ![Canvas App - Home Page - Staff selections](../../Images/Home_StudentForms.jpg)
+**Student's Milestones Completed:** ![MilestonesCompleted](../../Images/MilestonesCompelted_1_Edited.jpg)
 **Popup preventing submittion of student forms if pending approvals exist:** ![Track Pending Approvals](../Images/MS6_PendingCommittee_Edited.jpg)
 
 ### College Staff
@@ -117,9 +117,9 @@ The system supports distinct user experiences based on role, ensuring that each 
 - Access reporting and administrative views  
 
 ### Access driven buttons (Current User Access: Program Coordinator): 
-**Home:** ![Canvas App - Home Page - Staff selections](../Images/Home_CollegeForms.jpg)
-**College's Committee List:** ![Canvas App - College List-committees](../Images/CollegeListsCommittees_edited.jpg)
-**College's Milestone's Met List:** ![Canvas App - College List-Milestones](../Images/CollegeListsMilestones_Edited.jpg)
+**Home:** ![Canvas App - Home Page - Staff selections](../../Images/Home_CollegeForms.jpg)
+**College's Committee List:** ![Canvas App - College List-committees](../../Images/CollegeListsCommittees_edited.jpg)
+**College's Milestone's Met List:** ![Canvas App - College List-Milestones](../../Images/CollegeListsMilestones_Edited.jpg)
 
 ---
 
@@ -135,9 +135,9 @@ The system supports both student-initiated and staff-initiated workflows, each w
 - Committee Members  
 - Dean’s Representative
 
-Milestone 6 Chair approval request example with due date and markup to make the ask clear: ![MS6EmailChair](../Images/MS6EmailChair_Edited.jpg)
+Milestone 6 Chair approval request example with due date and markup to make the ask clear: ![MS6EmailChair](../../Images/MS6EmailChair_Edited.jpg)
 
-Milestone 6 Approval Reminder example with due date and Button navigating the the Approval by environment and approval ID: ![MS6EmailReminder](../Images/EmailReminder_Edited.jpg)
+Milestone 6 Approval Reminder example with due date and Button navigating the the Approval by environment and approval ID: ![MS6EmailReminder](../../Images/EmailReminder_Edited.jpg)
 
 ### Staff-Driven Approvals (Milestones 4, 5, 8)
 
@@ -156,7 +156,7 @@ A Model-Driven App provides a centralized interface for managing system data, bu
 
 ### Approved Faculty
 
-![Approved Faculty](../Images/AdminScreen_ApprovedFaculty_Edited.jpg)
+![Approved Faculty](../../Images/AdminScreen_ApprovedFaculty_Edited.jpg)
 
 Faculty eligibility is controlled through defined levels:
 - Level 2: Eligible to serve as Chair or Member  
@@ -165,9 +165,9 @@ Faculty eligibility is controlled through defined levels:
 
 This ensures that committee assignments comply with academic policies and only allows students to select eligible faculty for committee role.
 
-PowerFx Collection in Canvas App to get approved faculty for selections: ![Approved Collection](../Images/Collection_ApprovedFaculty.jpg)
+PowerFx Collection in Canvas App to get approved faculty for selections: ![Approved Collection](../../Images/Collection_ApprovedFaculty.jpg)
 
-Level 2 Faculty Selections in Canvas App based on Collectino (FIlter: DorcoralLevel = 2): ![Approved Faculty](../Images/MS6_3_Edited.jpg)
+Level 2 Faculty Selections in Canvas App based on Collectino (FIlter: DorcoralLevel = 2): ![Approved Faculty](../../Images/MS6_3_Edited.jpg)
 
 ---
 
@@ -206,7 +206,7 @@ A custom approval tracking layer extends native approval functionality by:
 Allows staff to select a faculty member and view all committees they are currently serving on, supporting visibility into faculty workload and participation.
 
 Custom Page
-![Faculty Serving_Custom Page](../Images/Admin_FacultyServing_CustomPage.jpg)
+![Faculty Serving_Custom Page](../../Images/Admin_FacultyServing_CustomPage.jpg)
 
 ---
 
@@ -277,7 +277,7 @@ This approach enabled:
 - Consistent deployment across environments using solution-based ALM practices  
 - Improved maintainability by centralizing environment configuration logic  
 
-![ListFormula](../Images/Formulas.jpg)
+![ListFormula](../../Images/Formulas.jpg)
 
 
 
