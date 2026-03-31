@@ -93,7 +93,7 @@ I focus on solutions that:
 
 If you'd like to discuss Power Platform solutions or opportunities:
 
-- LinkedIn: *(add your link here)*
-- Email: *(optional)*
+- LinkedIn: [*Jessica Shuler*](https://www.linkedin.com/in/jessica-shuler-600b5852/)
+- Email: jessica.shuler25@gmail.com
 
 ---
