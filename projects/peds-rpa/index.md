@@ -86,8 +86,10 @@ This combination of automation, validation controls, and performance visibility 
 
 
 ### High Level Diagram 
-
-![PEDS_Diagram](../../Images/PEDS_Diagram.jpg)
+<p align="center">
+  <img src="../../Images/PEDS_Diagram.jpg" width="100%"><br>
+  <em>High-level architecture diagram</em>
+</p>
 
 ---
 
