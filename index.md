@@ -59,4 +59,5 @@ My solutions are designed using structured, enterprise-ready patterns:
 
 ## Contact
 
-- LinkedIn: (add your link)
+- LinkedIn: [*Jessica Shuler*](https://www.linkedin.com/in/jessica-shuler-600b5852/)
+- Email: jessica.shuler25@gmail.com
