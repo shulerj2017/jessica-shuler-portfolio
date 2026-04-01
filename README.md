@@ -27,7 +27,7 @@ Application Systems Analyst specializing in Power Platform solutions that stream
 - Automated document generation and tracking  
 - Data integration for downstream student record updates  
 
-[View Project →](./projects/Graduate%20College%20Milestone%20Tracking.md)
+[View Project →](./projects/graduate-college)
 
 ---
 
