@@ -27,7 +27,7 @@ Application Systems Analyst specializing in Power Platform solutions that stream
 - Automated document generation and tracking  
 - Data integration for downstream student record updates  
 
-[View Project →](./projects/graduate-college)
+[View Project →](./projects/graduate-college/index.md)
 
 ---
 
@@ -40,7 +40,7 @@ Application Systems Analyst specializing in Power Platform solutions that stream
 - Automated web-based data entry  
 - Full lifecycle notifications and monitoring  
 
-[View Project →](./projects/peds-rpa)
+[View Project →](./projects/peds-rpa/index.md)
 
 ---
 
