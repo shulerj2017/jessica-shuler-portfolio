@@ -40,7 +40,7 @@ Application Systems Analyst specializing in Power Platform solutions that stream
 - Automated web-based data entry  
 - Full lifecycle notifications and monitoring  
 
-[View Project →](./projects/Financial%20Data%20Processing%20Automation%20(RPA).md)
+[View Project →](./projects/peds-rpa)
 
 ---
 
