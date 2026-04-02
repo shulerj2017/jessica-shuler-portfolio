@@ -44,6 +44,20 @@ Queue-based unattended automation system
 
 ---
 
+## Event & Outreach Request Management System
+
+Centralized request and scheduling platform
+
+- Canvas App with SharePoint-backed data model  
+- Admin-driven configuration for dropdown values and system behavior  
+- Role-based access with automated SharePoint permission management  
+- Dynamic form experience with conditional sections based on request type  
+- Calendar view with color-coded events and due date visibility  
+
+[View Project →](./projects/request-management)
+
+---
+
 ## Architecture & Design Focus
 
 My solutions are designed using structured, enterprise-ready patterns:
