@@ -218,14 +218,14 @@ Access levels are managed through a SharePoint-backed configuration list and enf
 The request form adapts based on user selections using choice/toggle-driven logic.
 
 <p align="center">
-  <img src="../../Images/Dropdowns_AssignedTo.jpg" width="80%"><br>
+  <img src="../../Images/Dropdowns_AssignedTo.jpg" width="100%"><br>
   <em>Dynamic Form – Combo Box choices driven from Choice Values in Admin Screen (Current Status, Assigned To).</em>
 </p>
 
 <br><br>
 
 <p align="center">
-  <img src="../../Images/NewRequest_Toggles.jpg" width="80%"><br>
+  <img src="../../Images/NewRequest_Toggles.jpg" width="100%"><br>
   <em>Conditional Logic – Toggles dynamically control visibility of additional required fields.</em>
 </p>
 
@@ -236,7 +236,7 @@ The request form adapts based on user selections using choice/toggle-driven logi
 The form enforces required data through a structured validation framework.
 
 <p align="center">
-  <img src="../../Images/NewRequest_Validation.jpg" width="80%"><br>
+  <img src="../../Images/NewRequest_Validation.jpg" width="100%"><br>
   <em>Validation Framework – Missing fields highlighted with submission blocked until complete.</em>
 </p>
 
