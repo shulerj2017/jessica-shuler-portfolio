@@ -117,7 +117,7 @@ Implemented an admin-driven configuration model to allow updates without applica
 
 <p align="center">
   <img src="../../Images/CalendarToolTip.jpg" width="80%"><br>
-  <em>Calendar View – Tooltip shows more details for item for a quick glance.</em>
+  <em>Calendar View – Hover tooltip displays key request details for quick reference.</em>
 </p>
 
 ---
