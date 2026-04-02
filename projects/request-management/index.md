@@ -4,46 +4,57 @@ Centralized request management solution supporting event coordination, storytell
 
 ---
 
-## Overview
+## Problem
 
-This solution was designed to streamline how event and outreach requests are submitted, tracked, and managed across teams. It provides a user-friendly interface for submitters while giving staff and administrators the tools needed to manage assignments, track progress, and enforce governance.
+Event and outreach requests were managed through informal processes, resulting in inconsistent data capture, limited visibility into request status, and manual coordination between staff. Requests for events, news stories, and social media were handled differently across teams, making it difficult to standardize workflows or track assignments.
 
-The system leverages SharePoint as the data source, Power Apps for the user interface, and Power Automate for access control and automation.
-
----
-
-## Key Capabilities
-
-- Centralized request intake for events, news stories, and social media content  
-- Role-based access control for administrators, staff, and viewers  
-- Admin-managed configuration of dropdown values and system behavior  
-- Dynamic form experience based on user selections  
-- Validation framework to ensure complete and accurate submissions  
-- Multiple views for managing requests (List View and Calendar View)  
-- Environment-based testing with controlled access simulation  
+A key gap was the lack of a centralized calendar view to display all events and due dates. Staff had no efficient way to visualize upcoming work or understand workload across the team, making it difficult to plan and prioritize requests.
 
 ---
 
-## Key Design Decisions
+## Solution
 
-- Admin-driven configuration eliminates dependency on developers  
-- SharePoint provides scalable and structured data storage  
-- Role-based UI enforces proper access and governance  
-- Dynamic form logic improves usability and reduces complexity  
-- Automated access control ensures consistency and reduces manual effort  
-- Environment-based role simulation enables safe testing before production  
+I designed and implemented a centralized request management solution using Microsoft Power Platform, combining a Canvas App, SharePoint lists, and Power Automate.
+
+The application standardizes request intake using dynamic, toggle-driven forms that adapt based on request type (event, news, social media). An admin-driven configuration model allows dropdown values such as assignment, photographer, and status to be managed without code changes.
+
+Role-based access is enforced through a SharePoint-backed configuration list and automated with Power Automate, ensuring users are placed into the correct permission groups. A calendar view provides a centralized, color-coded visualization of requests by date and category.
+
+The solution also follows a DEV/TEST/PROD model, including a test environment with role simulation to validate access scenarios before release.
 
 ---
 
 ## Impact
 
-- Improved visibility into event and outreach requests  
-- Reduced manual coordination and communication overhead  
-- Enabled scalable request management across teams  
-- Increased data quality through enforced validation  
-- Simplified maintenance through admin-driven design  
-- Reduced deployment risk through structured ALM practices
-  
+The solution created a centralized and standardized platform for managing requests, improving visibility and reducing manual coordination.
+
+The introduction of a calendar view enabled staff to better plan and track upcoming work, while role-based access and automation reduced administrative overhead. Dynamic forms and validation logic improved data quality, and the admin-driven design simplified ongoing maintenance.
+
+---
+
+## Key Challenges and How They Were Solved
+
+**Lack of centralized visibility and scheduling**  
+Introduced a calendar view to provide a clear overview of events and deadlines.
+
+**Inconsistent request intake**  
+Built dynamic forms that adapt to different request types while enforcing required data.
+
+**Manual access management**  
+Automated SharePoint permissions based on role assignments.
+
+**Ongoing maintenance of system values**  
+Implemented an admin-driven configuration model to allow updates without application changes.
+
+---
+
+## Key Design Decisions
+
+- Implemented an admin-driven configuration model to allow system updates without application changes  
+- Used SharePoint as the primary data source to balance structure, accessibility, and rapid development  
+- Enforced role-based access through both UI logic and automated SharePoint permissions  
+- Introduced a test environment with role simulation to validate access behavior before production release  
+
 ---
 
 ## Architecture
