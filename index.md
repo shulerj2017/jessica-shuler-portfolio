@@ -54,7 +54,7 @@ Centralized request and scheduling platform
 - Dynamic form experience with conditional sections based on request type  
 - Calendar view with color-coded events and due date visibility  
 
-[View Project →](./projects/request-management)
+[View Project →](./projects/request-management/)
 
 ---
 
