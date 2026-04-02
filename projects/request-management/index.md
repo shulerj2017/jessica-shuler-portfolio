@@ -197,11 +197,11 @@ Access levels are managed through a SharePoint-backed configuration list and enf
 
 ## Dynamic Form Experience
 
-The request form adapts based on user selections using toggle-driven logic.
+The request form adapts based on user selections using choice/toggle-driven logic.
 
 <p align="center">
-  <img src="../../Images/NewRequest_Form.jpg" width="80%"><br>
-  <em>Dynamic Form – Sections expand based on user selections (event, photography, news, social media).</em>
+  <img src="../../Images/Dropdowns_AssignedTo.jpg" width="80%"><br>
+  <em>Dynamic Form – Combo Box choices driven from Choice Values in Admin Screen (Current Status, Assigned To).</em>
 </p>
 
 <br><br>
