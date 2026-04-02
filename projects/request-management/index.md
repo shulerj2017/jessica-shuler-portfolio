@@ -81,36 +81,43 @@ Implemented an admin-driven configuration model to allow updates without applica
 ## High Level Screens
 
 <p align="center">
-  <img src="../../Images/VoinovichHome.jpg" width="80%"><br>
+  <img src="../../Images/VoinovichHome.jpg" width="100%"><br>
   <em>Home Screen – Navigation entry point with role-based experience and TEST access simulation controls.</em>
 </p>
 
 <br><br>
 
 <p align="center">
-  <img src="../../Images/Admin_UserAccess.jpg" width="80%"><br>
+  <img src="../../Images/Admin_UserAccess.jpg" width="100%"><br>
   <em>Admin Access Management – Controls user roles and drives SharePoint permission assignment via automation.</em>
 </p>
 
 <br><br>
 
 <p align="center">
-  <img src="../../Images/Admin_ChoiceValues.jpg" width="80%"><br>
+  <img src="../../Images/Admin_ChoiceValues.jpg" width="100%"><br>
   <em>Admin Choice Values – Centralized management of dropdown values used throughout the application.</em>
 </p>
 
 <br><br>
 
 <p align="center">
-  <img src="../../Images/ListView.jpg" width="80%"><br>
+  <img src="../../Images/ListView.jpg" width="100%"><br>
   <em>List View – Filterable and sortable interface with role-based visibility and assignment tracking.</em>
 </p>
 
 <br><br>
 
 <p align="center">
-  <img src="../../Images/CalendarView.jpg" width="80%"><br>
+  <img src="../../Images/CalendarView.jpg" width="100%"><br>
   <em>Calendar View – Color-coded visualization of requests by date and category.</em>
+</p>
+
+<br><br>
+
+<p align="center">
+  <img src="../../Images/CalendarToolTip.jpg" width="100%"><br>
+  <em>Calendar View – Tooltip shows more details for item for a quick glance.</em>
 </p>
 
 ---
