@@ -140,13 +140,13 @@ The application includes built-in input validation, user guidance, and a visual 
 By standardizing this calculation step, the tool reduces manual errors and ensures that data entering the validation and automation pipeline is consistent, improving overall processing reliability and reducing downstream correction cycles.
 
 <p align="center">
-  <img src="../../Images/PEDS_Calculator_Start.JPG" width="70%">
+  <img src="../../Images/PEDS_Calculator_Start.JPG" width="80%">
   <br>
   <em>Transfer % Calculator – Provides visual of example form.</em>
 </p>
 
 <p align="center">
-  <img src="../../Images/PEDS_Calculator_end.JPG" width="70%">
+  <img src="../../Images/PEDS_Calculator_end.JPG" width="80%">
   <br>
   <em>Transfer % Calculator – Standardizes calculation of required percentage prior to submission.</em>
 </p>
