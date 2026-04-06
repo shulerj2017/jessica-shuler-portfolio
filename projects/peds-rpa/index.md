@@ -23,6 +23,7 @@ A scheduled orchestration flow retrieves queue items and triggers an unattended 
 
 Validated files proceed to automated data entry, where each row is submitted into the PEDS system in a controlled execution model. Processing results are logged, and notifications are generated throughout the lifecycle to provide visibility into file acceptance, validation outcomes, and final processing results.
 
+
 ---
 
 ## Impact
@@ -117,6 +118,35 @@ This combination of automation, validation controls, and performance visibility 
 
 ### Human-in-the-Loop
 - PowerApp enables monitoring, prioritization, and manual intervention.
+
+---
+
+## Supporting Tool: Transfer % Calculator
+
+To further reduce upstream data inconsistencies and improve validation accuracy, I developed a lightweight desktop application using Python to standardize the calculation of transfer percentages required for PEDS submissions.
+
+The calculator provides a guided interface that aligns with the structure of the PEDS report, allowing users to:
+
+- Enter the total payroll amount from the report’s **“Total” row**  
+- Enter the total dollar amount to be moved (including benefits)  
+- Automatically calculate the correct transfer percentage  
+- Copy the result directly into the PEDS form  
+
+The application includes built-in input validation, user guidance, and a visual reference of the source report to ensure consistent and accurate data entry.
+
+By standardizing this calculation step, the tool reduces manual errors and ensures that data entering the validation and automation pipeline is consistent, improving overall processing reliability and reducing downstream correction cycles.
+
+<p align="center">
+  <img src="../../Images/PEDS_Calculator_Start.JPG" width="70%">
+  <br>
+  <em>Transfer % Calculator – Provides visual of example form.</em>
+</p>
+
+<p align="center">
+  <img src="../../Images/PEDS_Calculator_end.JPG" width="70%">
+  <br>
+  <em>Transfer % Calculator – Standardizes calculation of required percentage prior to submission.</em>
+</p>
 
 ---
 
