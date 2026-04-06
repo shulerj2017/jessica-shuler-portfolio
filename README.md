@@ -13,6 +13,7 @@ Application Systems Analyst specializing in Power Platform solutions that stream
 - Dataverse & SharePoint
 - Workflow architecture and ALM strategy
 - RPA and unattended automation
+- Python (automation scripting and desktop tool development)
 
 ---
 
@@ -37,7 +38,8 @@ Application Systems Analyst specializing in Power Platform solutions that stream
 - Power Automate + Power Automate Desktop (Unattended VM)  
 - Centralized queue and orchestration model  
 - File validation, error handling, and retry logic  
-- Automated web-based data entry  
+- Automated web-based data entry
+- Python-based tooling for data validation and pre-processing
 - Full lifecycle notifications and monitoring  
 
 [View Project →](./projects/peds-rpa/index.md)
