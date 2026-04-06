@@ -19,10 +19,11 @@ To address these challenges, I designed and implemented a queue-based RPA archit
 
 The process begins with file submission via email or manual upload, followed by a lightweight intake check to confirm that the file is a valid Excel document containing the expected PEDS identifier. Files that pass this screening are added to a centralized SharePoint-based queue, where they are managed, tracked, and prioritized.
 
+To improve data consistency before entering the validation pipeline, a supporting calculation tool was introduced to standardize how users determine transfer percentages required for PEDS submissions. This ensures that key financial inputs are calculated consistently prior to automated validation and processing.
+
 A scheduled orchestration flow retrieves queue items and triggers an unattended Power Automate Desktop bot running on a virtual machine. Detailed validation is performed at this stage, including file structure checks, business rule enforcement, and date validation. Files that fail validation are marked directly within the Excel file and returned to the submitter for correction, preventing invalid data from entering downstream processing.
 
 Validated files proceed to automated data entry, where each row is submitted into the PEDS system in a controlled execution model. Processing results are logged, and notifications are generated throughout the lifecycle to provide visibility into file acceptance, validation outcomes, and final processing results.
-
 
 ---
 
@@ -30,17 +31,19 @@ Validated files proceed to automated data entry, where each row is submitted int
 
 The solution replaced a manual, fragmented process with a structured automation platform that significantly reduced processing time and improved consistency across submissions.
 
-By introducing a centralized queue and orchestration layer, staff gained real-time visibility into the lifecycle of each file, from intake through validation and final processing. This enabled better prioritization of urgent work, faster troubleshooting of failures, and more predictable turnaround times.
+By introducing both a centralized queue and a standardized pre-processing approach, staff gained real-time visibility into the lifecycle of each file—from intake through validation and final processing. This enabled better prioritization of urgent work, faster troubleshooting of failures, and more predictable turnaround times.
+
+A key improvement was the introduction of a supporting calculation tool to standardize transfer percentage inputs prior to submission. By removing variability in how users calculated percentages, the system reduced upstream data inconsistencies and improved the overall quality of data entering the validation and automation pipeline. This resulted in fewer validation failures and reduced the need for rework.
 
 The architecture also improved resilience by separating intake, validation, and execution. Invalid files are intercepted before processing, and failures can be retried without duplicating work, ensuring that issues do not block overall progress.
 
 The system was designed to handle high-volume correction files at scale while also providing insight into performance. In one representative run, the automation evaluated 998 Excel rows containing 756 requested corrections. Runtime tracking showed that most processing time occurs during the web-based input phase, while validation completes more efficiently. The average runtime per requested correction is approximately 45 seconds, including both validation and system entry.
 
-These metrics not only demonstrate throughput but also highlight the effectiveness of the validation layer in filtering out invalid or non-processable corrections before they reach the downstream system.
+These metrics not only demonstrate throughput but also highlight the effectiveness of the validation layer—combined with standardized user inputs—in filtering out invalid or non-processable corrections before they reach the downstream system.
 
 In addition, automated notifications at key stages—file acceptance, validation results, and final processing summary—provide clear feedback to submitters and reduce the need for manual follow-up.
 
-This combination of automation, validation controls, and performance visibility transformed a manual, error-prone workflow into a scalable and measurable processing system.
+This combination of automation, validation controls, standardized inputs, and performance visibility transformed a manual, error-prone workflow into a scalable and measurable processing system.
 
 ---
 
