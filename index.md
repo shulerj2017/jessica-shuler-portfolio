@@ -8,12 +8,15 @@ Enterprise solutions focused on workflow automation, governance, and scalable bu
 
 Application Systems Analyst specializing in Power Platform solutions that streamline business processes, improve data visibility, and support enterprise governance.
 
-- Power Apps (Canvas + Model-Driven)
-- Power Automate (Cloud + Desktop)
-- Dataverse & SharePoint
-- Workflow architecture and ALM strategy
-- RPA and unattended automation
-- Python (automation scripting and desktop tool development)
+- Power Platform Solution Architecture
+- Application Lifecycle Management (DEV / TEST / PROD)
+- Power Apps (Canvas & Model-Driven)
+- Power Automate (Cloud & Desktop)
+- Dataverse, SharePoint, and Microsoft 365 Integration
+- Enterprise Workflow Design & Approval Automation
+- RPA and Unattended Automation
+- HTTP/API Integrations and Custom Business Logic
+- Python (Automation Scripting and Utility Development)
 
 ---
 
