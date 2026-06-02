@@ -46,8 +46,7 @@ Queue-based unattended automation system
 
 ---
 
-## Event & Outreach Request Management System
-
+### Event & Outreach Request Management System
 Centralized request and scheduling platform
 
 - Canvas App with SharePoint-backed data model  
