@@ -22,7 +22,7 @@ Application Systems Analyst specializing in Power Platform solutions that stream
 ### Graduate College Milestone Tracking System  
 Enterprise workflow and approval platform
 
-- Multi-stage approval workflows across academic roles  
+- Multi-stage approval workflows across academic roles with HTTP call to cancel approvals when needed 
 - Canvas + Model-Driven App architecture  
 - Dataverse-backed reporting and governance  
 - Automated document generation and tracking  
