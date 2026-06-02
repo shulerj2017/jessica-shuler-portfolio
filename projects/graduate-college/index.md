@@ -197,6 +197,16 @@ This structure ensures appropriate oversight while reducing delays by allowing m
   <em>Automated reminder email including deadline and direct navigation link to the approval record within the correct environment.</em>
 </p>
 
+---
+
+#### Canceling Approval Request Upon Timeout
+
+<p align="center">
+  <img src="../../Images/API_CancelApproval.jpg" width="80%">
+  <br>
+  <em>Automated timeout handling using the Microsoft Approvals API. When an approval exceeds the defined response window or becomes unnecessary due to an earlier rejection, an authenticated HTTP DELETE request automatically cancels the approval and prevents stale approval records from remaining active.</em>
+</p>
+
 ### Staff-Driven Approvals (Milestones 4, 5, 8)
 
 - Submitted by staff  
