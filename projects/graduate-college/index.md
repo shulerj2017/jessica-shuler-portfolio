@@ -227,7 +227,7 @@ A Model-Driven App provides a centralized interface for managing system data, bu
 The Model-Driven App manages faculty eligibility and enforces governance rules for committee selection.
 
 <p align="center">
-  <img src="../../Images/AdminScreen_ApprovedFaculty_Edited.jpg" width="80%">
+  <img src="../../Images/Admin Screen_ApprovedFaculty_Edited.jpg" width="80%">
   <br>
   <em>Approved Faculty Management – Administrative interface for maintaining faculty eligibility levels.</em>
 </p>
